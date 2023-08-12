@@ -71,6 +71,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({
   const [loadingState, setLoadingState] = useState<boolean>(false);
   const [eirCodeCheckState, setEirCodeCheckState] =
     useState<EirCodeCheckStateEnum>(EirCodeCheckStateEnum.Pending);
+  const [formSubmitStatus, setFormSubmitSatus] = useState<0 | 1 | 2>(0);
 
   useEffect(() => {
     const fetchServices = async () => {
@@ -139,23 +140,24 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({
           if (!values.address.length)
             values = await identifyAddressByEirCode(values);
 
-          await consultationRequestService.submit(values);
-          toast.success(
-            "Thanks for your interest. We will be in contact soon.",
-            {
-              hideProgressBar: true,
-            }
-          );
-          window.gtag('event', 'form_submission', { event_category: 'success' });
-
+          // await consultationRequestService.submit(values);
+          // toast.success(
+          //   "Thanks for your interest. We will be in contact soon.",
+          //   {
+          //     hideProgressBar: true,
+          //   }
+          // );
+          // window.gtag('event', 'form_submission', { event_category: 'success' });
+          setFormSubmitSatus(1);
           setSubmitting(false);
           resetForm();
 
-          formSubmitted && formSubmitted(true);
-          document.body.classList.remove("overflow-hidden");
+          // formSubmitted && formSubmitted(true);
+          // document.body.classList.remove("overflow-hidden");
         } catch (error) {
-          window.gtag('event', 'form_submission', { event_category: 'failure' });
-          toast.error("Something went wrong. Please try after sometime.");
+          setFormSubmitSatus(2);
+          // window.gtag('event', 'form_submission', { event_category: 'failure' });
+          // toast.error("Something went wrong. Please try after sometime.");
         }
       }}
     >
@@ -241,6 +243,15 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({
                       ? "Please wait ..."
                       : "Submit"}
                   </button>
+
+                  {formSubmitStatus == 1 && <div id="success-form-submission" className="bg-green-500 text-white rounded-lg p-4">
+                    <h5>Thanks for your interest. We will be in contact soon.</h5>
+                  </div>}
+
+                  {formSubmitStatus == 2 && <div id="failed-form-submission" className="bg-red-500 text-white rounded-lg p-4">
+                    <h5>Something went wrong. Please try after sometime.</h5>
+                  </div>}
+
                   <p className="text-white">
                     By submitting this form you accept the{" "}
                     <Link
