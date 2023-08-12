@@ -140,7 +140,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({
           if (!values.address.length)
             values = await identifyAddressByEirCode(values);
 
-          // await consultationRequestService.submit(values);
+          await consultationRequestService.submit(values);
           // toast.success(
           //   "Thanks for your interest. We will be in contact soon.",
           //   {
