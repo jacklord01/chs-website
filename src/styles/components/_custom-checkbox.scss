@@ -1,0 +1,153 @@
+.checkbox {
+	&-group {
+		@media (max-width: 1024px) {
+			margin: 0 -8px;
+		}
+		.slick-track {
+			margin: 0;
+		}
+	}
+	&-item {
+		position: relative;
+		@media (max-width: 1024px) {
+			float: left;
+			margin: 16px 8px 0;
+		}
+		@media (max-width: 375px) {
+			width: calc(50% - 16px);
+		}
+		.custom-checkbox {
+			background: #ffffff;
+			border: 1px solid rgba(13, 13, 13, 0.15);
+			padding: 20px 16px;
+			min-height: 160px;
+			width: 162px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			@media (max-width: 345px) {
+				width: 100%;
+			}
+		}
+		.checkbox-content {
+			color: #0d0d0d;
+			font-size: 14px;
+			svg {
+				margin: 0 auto 16px;
+				fill-opacity: 0.5;
+			}
+		}
+		.check-icon {
+			width: 26px;
+			height: 26px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: $secondary-color;
+			border-radius: 50%;
+			position: absolute;
+			top: 9px;
+			right: 9px;
+			svg {
+				fill: white;
+			}
+		}
+
+		input {
+			~ .check-icon {
+				display: none;
+			}
+			&:checked {
+				~ .custom-checkbox {
+					background: $primary-color;
+					box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.1);
+					.checkbox-content {
+						color: #fff;
+						font-weight: 700;
+						svg {
+							fill-opacity: 1;
+						}
+					}
+				}
+
+				~ .check-icon {
+					display: flex;
+				}
+			}
+		}
+		&-xl {
+			.check-icon {
+				border: 1px solid rgba(13, 13, 13, 0.6);
+				background: #fff;
+			}
+			.custom-checkbox {
+				border: 1px solid rgba(214, 214, 214, 0.2);
+				border-radius: 3px;
+			}
+			.checkbox-content {
+				@media (min-width: 1280px) {
+					font-size: 16px;
+					svg {
+						margin-bottom: 30px;
+					}
+				}
+			}
+			input {
+				~ .check-icon {
+					display: flex;
+				}
+
+				&:checked {
+					~ .custom-checkbox .check-icon {
+						background: $secondary-color;
+						border-color: $secondary-color;
+					}
+					~ .icon {
+						color: $secondary-color;
+					}
+				}
+			}
+		}
+	}
+	&-single {
+		@media (max-width: 1024px) {
+			float: none;
+			margin: 0;
+			margin-bottom: 24px;
+		}
+
+		@media (max-width: 375px) {
+			width: 100%;
+			.custom-checkbox {
+				padding-right: 50px;
+			}
+		}
+	}
+}
+
+// file-upload
+.file-upload {
+	background: #ffffff;
+	border: 1px solid rgba(13, 13, 13, 0.15);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	label {
+		padding: 90px 0;
+		width: 100%;
+		text-align: center;
+		color: #0d0d0d;
+		svg {
+			margin: 0 auto;
+		}
+		span {
+			display: block;
+			margin-top: 5px;
+		}
+	}
+}
+
+.slider-item-center {
+	text-align: -webkit-center;
+}

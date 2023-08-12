@@ -1,0 +1,44 @@
+.thought{
+	&-inner{
+		&:first-child{
+			.down-arrow{
+				display: none;
+			}
+		}
+	}
+	&-item {
+		background: #fff;
+		border: 1px solid rgba(13, 13, 13, 0.15);
+		@media (min-width: 1024px) {
+			transition: all 0.3s;
+			max-width: 900px;
+			margin: 0 auto;
+			&:hover {
+				max-width: 1030px;
+				padding-left: 115px;
+				padding-right: 115px;
+				border: 1px solid #08a8ff;
+				box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+			}
+		}
+	}
+}
+
+.guarantee-service {
+	.gs-item {
+		@media (min-width: 1024px) {
+			&:nth-child(even) {
+				.gs-image {
+					order: 1;
+				}
+				.gs-content {
+					margin-left: 0;
+					margin-right: -230px;
+				}
+			}
+		}
+		.gs-content {
+			box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.05);
+		}
+	}
+}

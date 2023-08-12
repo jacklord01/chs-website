@@ -1,0 +1,144 @@
+.btn {
+	font-family: $primary-font;
+	border-radius: 0px;
+	line-height: 20px;
+	font-weight: 600;
+	font-size: 16px;
+	border: 1px solid transparent;
+	display: inline-flex;
+	justify-content: center;
+	vertical-align: middle;
+	padding: 14px 25px;
+	outline: none !important;
+	box-shadow: none !important;
+	min-width: 220px;
+	text-align: center;
+	color: rgba($dark, 0.6);
+	@include transition;
+	@media (min-width: 575px) {
+		padding: 14px 35px;
+	}
+	&:hover {
+		box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.1),
+			5px 15px 15px rgba(0, 0, 0, 0.1) !important;
+	}
+	&-primary {
+		background: $primary-color;
+		border-color: $primary-color;
+		color: #fff;
+		&.small {
+			padding: 9px 8px;
+			min-width: 148px;
+		}
+		&.outline {
+			background: #fff;
+			border-color: $primary-color;
+			color: $primary-color;
+		}
+		&:hover,
+		&:focus {
+			background: $secondary-color;
+			border-color: $secondary-color;
+			color: #fff;
+		}
+	}
+	&-secondary {
+		background: $secondary-color;
+		color: #fff;
+		border-color: $secondary-color;
+		&.small {
+			padding: 9px 8px;
+			min-width: 148px;
+		}
+	}
+	&-white {
+		background: #fff;
+		color: $primary-color;
+		&.outline {
+			background: transparent;
+			border-color: #fff;
+			color: #fff;
+		}
+	}
+	&-dark {
+		background: $dark;
+		color: #fff;
+		border-color: $dark;
+		&.outline {
+			background: transparent;
+			color: $dark;
+		}
+	}
+	&.secondary-hover {
+		&:hover {
+			background: $secondary-color;
+			color: #fff;
+			border-color: $secondary-color;
+		}
+	}
+	&.white-hover {
+		&:hover {
+			background: #fff;
+			color: $primary-color !important;
+			border-color: #fff !important;
+		}
+	}
+}
+
+.button-group {
+	@media (max-width: 768px) {
+		.btn {
+			min-width: 150px;
+		}
+	}
+}
+
+.slider-arrow {
+	background: linear-gradient(
+		-90deg,
+		rgba(243, 243, 243, 0) 0%,
+		#f3f3f3 69.63%
+	);
+}
+
+.btn-request {
+	background-image: linear-gradient(
+		to right,
+		#013b71 0%,
+		#1262b8 51%,
+		#013b71 100%
+	);
+	background-size: 200% auto;
+	color: #fff;
+	font-size: 18px;
+	align-items: center;
+	padding: 24px;
+	filter: drop-shadow(0px -4px 15px rgba(0, 0, 0, 0.1));
+	border: 0;
+	svg {
+		margin-right: 15px;
+		transform: rotate(90deg);
+	}
+	&:hover {
+		background-position: right center;
+	}
+}
+
+.request-btn {
+	right: -94px;
+	top: 50%;
+	z-index: 91;
+	transform: rotate(-90deg);
+	position: fixed;
+
+	@media (max-width: 768px) {
+		right: -85px;
+		.btn-request {
+			padding: 16px;
+			font-size: 16px;
+			svg {
+				width: 16px !important;
+			}
+		}
+	}
+}

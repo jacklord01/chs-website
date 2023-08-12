@@ -1,0 +1,155 @@
+.calculator-box {
+	background: rgba($dark, 0.7);
+	padding: 45px 16px;
+	@media (min-width: 640px) {
+		padding: 45px;
+	}
+}
+
+.form-label {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1;
+	color: $primary-color;
+	margin-bottom: 10px;
+	display: block;
+}
+.form-label-md {
+	font-size: 1em;
+	font-weight: 600;
+}
+.form-label-lg {
+	font-size: 1.313em;
+	font-weight: 600;
+	@media (min-width: 767px) {
+		font-size: 1.5em;
+	}
+}
+.form-control {
+	width: 100%;
+	border: 1px solid rgba($dark, 0.15);
+	padding: 5px 15px;
+	background-color: #fff;
+	height: 50px;
+	font-size: 16px;
+	font-weight: 400;
+	color: $dark;
+	border-radius: 0px;
+	box-shadow: none !important;
+	outline: none !important;
+	@include placeholder {
+		font-size: 16px;
+		font-weight: 400;
+		color: rgba($dark, 0.6);
+		border-radius: 0px;
+	}
+	&:focus {
+		border-color: $secondary-color;
+	}
+	&.white {
+		background-color: rgba(#fff, 0.1);
+		border-color: rgba(#fff, 0.1);
+		color: #fff;
+		@include placeholder {
+			color: rgba(#fff, 0.5);
+		}
+		&:focus {
+			border-color: #fff;
+		}
+	}
+}
+textarea {
+	height: auto !important;
+	resize: none;
+	padding-top: 10px !important;
+}
+// input[type=number]
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	appearance: textfield;
+}
+
+.with-icon {
+	@apply relative;
+	.form-control {
+		padding-right: 40px;
+	}
+	.icon {
+		@apply absolute cursor-pointer top-0 right-0;
+		padding: 18px 15px;
+	}
+}
+
+.form-select {
+	@extend .form-control;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.749878 0.607422L5.74988 5.60742L10.7499 0.607422' stroke='rgba(13, 13, 13, 0.6)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 16px center;
+	option {
+		color: #004e9b;
+	}
+	&.white {
+		background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.749878 0.607422L5.74988 5.60742L10.7499 0.607422' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+		option {
+			color: #004e9b;
+		}
+	}
+}
+
+.app {
+	&-request-form {
+		.form-box {
+			@media (min-width: 1024px) {
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: -70px;
+					border-style: solid;
+					border-width: 0 0 60px 70px;
+					border-color: transparent transparent #204971 transparent;
+				}
+			}
+			.form-label {
+				color: #fff;
+			}
+		}
+	}
+	&-form-text {
+		@media (max-width: 1023px) {
+			text-align: center;
+		}
+		h2 {
+			font-size: 18px;
+			font-weight: 400;
+			color: $primary-color;
+			padding-bottom: 16px;
+			@media (min-width: 640px) {
+				font-size: 1.313em;
+			}
+		}
+		h1 {
+			font-size: 1.313em;
+			line-height: 32px;
+			color: $primary-color;
+			@media (min-width: 640px) {
+				font-size: 2.5em;
+				line-height: 48px;
+			}
+		}
+	}
+}
+
+// Request Call
+.app-request-call {
+	background: linear-gradient(115.31deg, #004993 48.31%, #035ab1 100%);
+}
+.error.text-danger{
+	font-weight: bold;
+}

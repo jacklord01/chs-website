@@ -1,0 +1,115 @@
+.app-service {
+	background: #f3f3f3;
+	overflow: hidden;
+	&-item {
+		@include transition;
+		&:hover {
+			box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.05);
+		}
+		&:nth-child(even) {
+			.app-service {
+				&-image {
+					@media (min-width: 767px) {
+						order: 999;
+					}
+				}
+				&-content {
+					background: #adc936;
+					color: $dark;
+					p {
+						color: $dark;
+					}
+					.btn.btn-white.outline {
+						border-color: $dark;
+						color: $dark;
+						&:hover {
+							border-color: $secondary-color;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+	&-item2 {
+		filter: drop-shadow(5px 15px 15px rgba(0, 0, 0, 0.1));
+	}
+	&-content {
+		background: linear-gradient(115.31deg, #004e9b 48.31%, #035ab1 100%);
+		padding: 16px;
+		color: #fff;
+		text-align: center;
+		@media (min-width: 640px) {
+			padding: 30px 55px;
+			text-align: left;
+		}
+		h2 {
+			margin-bottom: 13px;
+			font-size: 1.313em;
+			@media (min-width: 768px) {
+				font-size: 1.313em;
+			}
+		}
+		p {
+			color: #fff;
+			margin-bottom: 20px;
+		}
+		&.green {
+			background: $success-light;
+			color: $dark;
+			p {
+				color: $dark;
+			}
+		}
+	}
+}
+.app-element-service {
+	.app-service-item {
+		&:last-child {
+			margin-bottom: 0px;
+		}
+		@media (min-width: 767px) {
+			&:nth-child(odd) {
+				.app-service-image {
+					order: 2;
+				}
+			}
+			&:nth-child(even) {
+				.app-service-image {
+					order: -1;
+				}
+			}
+		}
+	}
+}
+
+// Stories
+.app-stories {
+	&-content {
+		h1 {
+			color: $primary-color;
+			@media (max-width: 767px) {
+				font-size: 1.313em;
+			}
+		}
+		p {
+			margin-bottom: 25px;
+		}
+	}
+}
+
+// Energy Service
+.app-energy-service {
+	&-icon {
+		max-width: 80px;
+	}
+}
+.technical-page-quote {
+	.img-box {
+		padding: 16px !important;
+		background: #fff;
+		@media (min-width: 1024px) {
+			padding: 30px 105px !important;
+		}
+	}
+}

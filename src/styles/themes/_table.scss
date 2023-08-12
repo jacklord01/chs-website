@@ -1,0 +1,33 @@
+.app-element-table{
+  &-list{
+    table{
+      thead{
+        tr{
+          th{
+            font-weight: 600;
+            font-size: 21px;
+            line-height: 30px;
+            color: $primary-color;
+            padding: 5px 20px;
+            height: 60px;
+          }
+        }
+      }
+      tbody{
+        tr{
+          td{
+            padding: 6px 20px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+          }
+          &:nth-child(even){
+            td{
+              background: #F8F8F8;
+            }
+          }
+        }
+      }
+    }
+  }
+}

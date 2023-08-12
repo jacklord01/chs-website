@@ -1,0 +1,141 @@
+.app {
+	&-testimonial {
+		overflow: hidden;
+	}
+	&-carousel {
+		.slick-list {
+			padding: 35px 0 50px !important;
+			@media (max-width: 639px) {
+				padding-bottom: 0 !important;
+			}
+		}
+		.slick-slider {
+			@media (max-width: 1279px) {
+				margin-right: -1px;
+			}
+			.slick-track {
+				display: flex;
+				align-items: center;
+			}
+		}
+		.item {
+			border: 1px solid rgba(13, 13, 13, 0.15);
+			padding: 24px;
+			p {
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 3;
+				white-space: pre-wrap;
+			}
+			svg {
+				margin-bottom: 16px;
+			}
+			.regards {
+				padding-top: 24px;
+				display: none;
+			}
+		}
+		.slick-center {
+			> div {
+				background: linear-gradient(115.31deg, #004993 48.31%, #035ab1 100%);
+				filter: drop-shadow(5px 15px 15px rgba(0, 0, 0, 0.1));
+
+				@media (min-width: 640px) {
+					margin-left: -90px;
+					width: 430px;
+				}
+				@media (min-width: 1024px) {
+					width: 570px;
+				}
+				.item {
+					svg {
+						fill: #08a8ff;
+					}
+					p {
+						color: rgba(255, 255, 255, 0.7);
+						overflow: visible;
+						display: block;
+						b {
+							color: #fff;
+						}
+					}
+					.regards {
+						display: block;
+					}
+				}
+			}
+		}
+		.slick-dots {
+			display: flex !important;
+			justify-content: center;
+			width: 100%;
+			padding: 15px 0 30px;
+			li {
+				padding: 10px 7px;
+				display: flex;
+				button {
+					border: 1px solid #004993;
+					height: 15px;
+					width: 15px;
+					border-radius: 50%;
+					font-size: 0;
+					line-height: 0;
+				}
+				&.slick-active button {
+					background: linear-gradient(115.31deg, #004993 48.31%, #035ab1 100%);
+				}
+			}
+		}
+	}
+}
+// app-accreditations
+.app {
+	&-accreditations {
+		background: #f3f3f3;
+		.slick-list .slick-track {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&-item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				margin: 0 auto;
+				width: auto;
+				height: 65px;
+			}
+		}
+		&-item-2 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				margin: 0 auto;
+				width: auto;
+				height: 50px;
+			}
+		}
+	}
+}
+
+.app-image-view-slider {
+	margin: 0px -15px;
+	@media (max-width: 480px) {
+		margin: 0px -5px;
+	}
+	.slick-slide {
+		padding: 0px 15px;
+		@media (max-width: 480px) {
+			padding: 0px 5px;
+			transform: scale(0.85);
+			opacity: 0.5;
+			&.slick-current {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+version: "3"
+services:
+  chswebapp:
+    build: .
+    container_name: chswebapp
+    restart: always
+    ports:
+      - "7170:7170"

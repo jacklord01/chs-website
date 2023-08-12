@@ -1,0 +1,75 @@
+.app-table {
+	border: 1px solid rgba(13, 13, 13, 0.15);
+	thead {
+		tr {
+			th {
+				color: #fff;
+				text-align: left;
+				padding: 7px 10px;
+				border-right: 1px solid rgba(13, 13, 13, 0.15);
+				background: #014a93;
+				font-weight: 400;
+				font-size: 12px;
+				@media (min-width: 767px) {
+					padding: 12px 16px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	tbody {
+		tr {
+			td {
+				border-right: 1px solid rgba(13, 13, 13, 0.15);
+				border-bottom: 1px solid rgba(13, 13, 13, 0.15);
+				padding: 10px;
+				color: #0d0d0d;
+				vertical-align: top;
+				font-size: 12px;
+				@media (min-width: 767px) {
+					padding: 12px 16px;
+					font-size: 16px;
+					p {
+						font-size: 10px;
+					}
+				}
+				p {
+					padding-top: 5px;
+					font-size: 16px;
+				}
+				&:last-child {
+					border-right: 0;
+				}
+			}
+			&:nth-child(odd) {
+				background: #fff;
+			}
+			&:nth-child(even) {
+				td{
+					background: rgba(13, 13, 13, 0.05);
+				}
+			}
+		}
+	}
+}
+
+.plan-list {
+	margin-top: 30px;
+	li {
+		display: block;
+		font-size: 1em;
+		padding: 8px;
+		padding-left: 35px;
+		position: relative;
+		&::before {
+			content: "—";
+			position: absolute;
+			left: 8px;
+			color: #08a8ff;
+			top: 8px;
+		}
+		&:nth-child(odd) {
+			background: rgba(13, 13, 13, 0.05);
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.apply-section {
+	padding: 45px 0 20px;
+	overflow: hidden;
+	@media (min-width: 767px) {
+		padding: 60px 0;
+	}
+	.title {
+		font-weight: 600;
+		font-size: 21px;
+		line-height: 32px;
+		color: #204971;
+		position: relative;
+		padding-bottom: 5px;
+		margin-bottom: 16px;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background: #005598;
+			height: 1.5px;
+			width: 82px;
+		}
+	}
+	p {
+		padding-bottom: 24px;
+		b {
+			color: #0d0d0d;
+		}
+	}
+	ul {
+		padding-bottom: 10px;
+		list-style: disc;
+		padding-left: 30px;
+		li {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 26px;
+			color: rgba(13, 13, 13, 0.6);
+		}
+	}
+}

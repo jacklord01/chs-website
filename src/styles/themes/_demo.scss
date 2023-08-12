@@ -1,0 +1,21 @@
+.demo-tab-menu{
+  border-bottom: 1px solid rgba(#0d0d0d, 0.15);
+  .nav-item{
+    padding: 5px 10px;
+    margin-right: 2px;
+    border: 1px solid transparent;
+    border-bottom: 0px;
+    cursor: pointer;
+    &.active{
+      border-top: 1px solid rgba(#0d0d0d, 0.15);
+      border-left: 1px solid rgba(#0d0d0d, 0.15);
+      border-Right: 1px solid rgba(#0d0d0d, 0.15);
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+  }
+}
+
+.preClass{
+  color: $success;
+}
