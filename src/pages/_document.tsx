@@ -10,7 +10,6 @@ export default function Document() {
 				<meta name="theme-color" content="#204971" />
 				<script async src="https://www.googletagmanager.com/gtag/js?id=G-M0RMS6EH9B"></script>
 
-
 				<script
 					dangerouslySetInnerHTML={{
 						__html: `

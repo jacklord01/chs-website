@@ -86,10 +86,6 @@ const ChsHead = ({ seoData }: HeadProps) => {
         </>
       )}
       <link rel="icon" href="/favicon.ico" />
-      <meta
-        name="google-site-verification"
-        content="6mJWwiojub47BBu_rz2iw6dZzH8mXsFVSYNL7QP0RrQ"
-      />
     </Head>
   );
 };
